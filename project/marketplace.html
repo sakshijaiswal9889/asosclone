@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            gap: 20px;
+            border: none;
+      
+         
+        }
+        nav a{
+            text-decoration: none;
+        }
+        .search-container{
+
+        }
+       
+        #size{
+            height: 20px;
+           
+        }
+        #navbar{
+            display: flex; 
+            gap: 10px;
+            margin-top: 20px;
+            
+          
+        }
+        #navbar a{
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+        }
+        #container{
+            margin-top: 100px;
+            display:flex;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        #container>div{
+            border: 1px solid black;
+        }
+        #container>div>img{
+            height:200px;
+         
+        }
+    </style>
+</head>
+<body>
+  <nav>
+
+    <a href="https://marketplace.asos.com/women?ctaref=mktp|women|nav|toptab">Women
+    </a>
+    <a href="https://marketplace.asos.com/men?ctaref=mktp|men|nav|toptab">Men</a>
+
+    <a href="https://marketplace.asos.com/boutiques?ctaref=mktp|btq|nav|toptab">boutiques</a>
+     <a id="shift" href="https://marketplace.asos.com/?dp=1"></a>
+
+     <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><img src="search.png" alt="Search"></button>
+      </div>
+
+      <div>
+      <img id="size"  src="contact.png" alt="">
+      </div>
+
+
+      <div>
+        <img id="size"  src="heart.png" alt="">
+      </div>
+
+      <div>
+        <img id="size" src="basket.png" alt="">
+      </div>
+
+  </nav>
+  
+  
+  <div id="navbar">
+    <a href="https://marketplace.asos.com/women?ctaref=mktp|women|nav|toptab">NEW IN
+    </a>
+    <a href="https://marketplace.asos.com/men?ctaref=mktp|men|nav|toptab">CLOTHING</a>
+     <a href="https://marketplace.asos.com/boutiques?ctaref=mktp|btq|nav|toptab">ACCESSORIES & SHOES</a>
+     <a id="shift" href="https://marketplace.asos.com/?dp=1">TRENDING NOW</a>
+     <a href="https://marketplace.asos.com/?dp=1">CLEARANCE</a>
+    
+
+     <div id="container">
+     
+
+
+     </div>
+</body>
+
+
+<script>
+
+let products = [
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+
+
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+
+
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  }
+];
+
+let container = document.getElementById("container");
+let productDiv = document.createElement("div");
+
+products.forEach(function(product, i) {
+  let title = document.createElement("h3");
+  title.innerHTML = product.title;
+
+  let price = document.createElement("p");
+  price.innerHTML = "Price: $" + product.price;
+
+  let description = document.createElement("p");
+  description.innerHTML = product.description;
+
+  let image = document.createElement("img");
+  image.src = product.image;
+  image.alt = product.title;
+
+  let rating = document.createElement("p");
+  rating.innerHTML = "Rating: " + product.rating.rate + " (" + product.rating.count + " reviews)";
+
+productDiv.append(title,price,description,image,rating);
+container.append(productDiv)
+});
+</script>
+
+</html>

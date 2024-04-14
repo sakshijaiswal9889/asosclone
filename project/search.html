@@ -1,0 +1,94 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+    <script>
+    let Products = [
+        {
+            title: "Mobile",
+            description: "16 GB RAM | 64 MP Camera",
+            img: "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70",
+            price: 48999
+        },
+        {
+            title: "Refrigerator",
+            description: "4 Star | Instant ICE",
+            img: "https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/y/d/k/-original-imagwnkacu6rgagg.jpeg?q=70",
+            price: 80000
+        }
+        // Add more products as needed...
+    ];
+
+    // const input = document.getElementById("#searchInput")
+    // const searchBtn = document.querySelector("searchBtn")
+
+    // console.log(input, searchBtn)
+
+    // input.addEventListener("change", (event) => console.log(event.target.value))
+
+    
+
+    let container = document.querySelector("#container");
+
+    // Function to display a specific product image
+    function showProductImage(index) {
+        // Hide all product images
+        let allImages = document.querySelectorAll(".product-image");
+        allImages.forEach(function(image) {
+            image.style.display = "none";
+        });
+        // Show the image of the specified product
+        let productImage = document.getElementById(`product-image-${index}`);
+        if (productImage) {
+            productImage.style.display = "block";
+        }
+    }
+
+    // Function to display products
+    function displayProducts() {
+        container.innerHTML = ''; // Clear container
+        Products.forEach(function(product, index) {
+            let separateDiv = document.createElement("div");
+            let title = document.createElement("h3");
+            title.innerHTML = product.title;
+            let img = document.createElement("img");
+            img.src = product.img;
+            img.classList.add("product-image");
+            img.style.display = "none"; // Initially hide the image
+            img.id = `product-image-${index}`; // Add unique id to each image
+            let desc = document.createElement("p");
+            desc.id = "desc";
+            desc.innerText = product.description;
+            let price = document.createElement("p");
+            price.innerText = product.price;
+            separateDiv.append(title, img, desc, price);
+            container.append(separateDiv);
+        });
+    }
+
+    // Initial display of products
+    displayProducts();
+
+    // Event listener for the search form
+    document.getElementById("search-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        let searchTerm = document.getElementById("search-input").value.toLowerCase();
+        let foundIndex = -1;
+        Products.forEach(function(product, index) {
+            if (product.title.toLowerCase().includes(searchTerm)) {
+                foundIndex = index;
+            }
+        });
+        if (foundIndex !== -1) {
+            showProductImage(foundIndex);
+        }
+    });
+</script>

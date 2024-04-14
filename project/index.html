@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <style>
+
+#navbar{
+display: flex;
+justify-content: end;
+ 
+}
+
+ 
+#decrease{
+height: 15px; 
+}
+
+#navbar2 ul{
+    display: flex;
+   
+    list-style-type: none;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(110, 61, 61);
+    width: 100%;
+    height: 100px;
+ 
+    
+  }
+
+ #navbar2 a{
+ text-decoration: none;
+
+
+ }
+
+ #navbar3 ul{
+ display: flex;
+ gap: 20px;
+ list-style-type: none;
+ font-size: 20px;
+ }
+
+ #navbar3 a{
+text-decoration: none;
+
+ }
+
+ #half{
+  height: 20px;
+ }
+  #images{
+    height: 20px;
+  }
+
+  #container{
+
+  display: flex;
+  background-color: aqua;
+  height: 50px;
+  width: 100%;
+  justify-content: space-between;
+
+  }
+  #container a{
+    text-decoration: none;
+  }
+
+#women{
+  height: 20px;
+  text-align: center;
+  margin: 15px;
+}
+
+#men{
+  height: 20px;
+  text-align: center;
+  margin: 15px;
+}
+#box-container{
+  text-decoration: none;
+  border: 1px solid white;
+  width: 40%;
+  height: 20px;
+  justify-content: center;
+  margin-top: 15px;
+  text-align: center;
+}
+#sale{
+justify-content: center;
+text-align: center;
+font-size: 50px;
+background-color: rgb(162, 227, 227);
+}
+
+
+#sale>a{
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 50px;
+}
+
+#underbox{
+  border: 1px solid black;
+  margin-left: 100px;
+}
+
+
+#container-image>img{
+height: 50%;
+width: 100%
+}
+#container a{
+  text-align: center;
+}
+
+#container-img{
+  display: flex;
+justify-content: center;
+}
+ .midpoint{
+  text-align: center;
+ }
+
+#container-img>div>img{
+  height:  300px;
+}
+
+p{
+  text-align: center;
+}
+
+
+#parentContainer{
+  display: flex;
+  height: 500px;
+  gap: 20px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(156, 230, 206);
+
+}
+
+#parentContaine>div{
+  border: 2px solid black;
+}
+
+#parentContainer>div>img{
+  height: 250px;
+}
+#anchor{
+  border: 1px solid black;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  height: 500px;
+  margin-top: 20px;
+}
+
+#anchor a>img{
+  height: 450px;
+  width: 100%;
+}
+#anchor>div{
+  border: 5px solid blueviolet;
+  
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h2 {
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #777;
+}
+
+ </style>
+</head>
+
+
+<body>
+  
+
+<nav id="navbar">
+
+<button onclick="market()">Marketplace</button>
+<button id="faq">FAQ,S</button>
+<button><img id="decrease" src="flag.png" alt=""></button>
+
+</nav>
+
+<nav id="navbar2">
+
+  <ul>
+      <li><a href="https://www.asos.com/women/"><h1>asos</h1></a></li>
+      <li><a href="men.html">men</a></li>
+      <li><a href="women.html">Women</a></li>
+     
+     
+      
+
+      
+        <li>
+          <form id="search-form" action="search.html" method="GET">
+              <input type="text" id="search-input" placeholder="Search item">
+              <button type="submit">Search</button>
+          </form>
+       
+    </li>
+  <li><a href="contact.html"><img id="images" src="contact.png" alt=""></a></li>
+  
+  <li><a href=""><img id="half" src="heart.png" alt=""></a></li>
+  <li><a href=""><img id="half" src="basket.png" alt=""></a></li>
+</ul>
+</nav>
+
+
+
+<nav id="navbar3">
+
+<ul>
+
+  <li><a href="sale.html">Sale</a>
+  </li>
+  <li><a href="new.html">New in</a></li>
+  <li><a href="clothing.html">Clothing</a></li>
+  <li><a href="trending.html">Trending</a></li>
+  <li><a href="Shoes.html">Shoes</a></li>
+  <li><a href="Accessoies.html">Accessoies</a></li>
+  <li><a href="Brands.html">Brands</a></li>
+  <li><a href="sports.html">Sports wear</a></li>
+  <li><a href="Topman.html">Topman</a></li>
+  <li><a href="marketplace.html">Marketplace</a></li>
+</ul>
+
+</nav>
+
+<div id="container">
+<button><a href="women.html">men</a></button>
+<a id="midpoint" href="Enter code LASTCHANCE at checkout to save an extra 40% off selected marked-down prices of styles included in the ASOS sale. Ends 8am UTC+1 on 15 April 2024. Code can be used multiple times per customer up to a maximum pre-discount spend of £500/€690 per order. Can’t be used with other promo codes or on gift vouchers, delivery charges, Premier Delivery or ASOS Marketplace. Country exclusions apply. Selected marked products excluded from promo.">Extra 40% off sale picks*lats chance to buy! with code lastchance</a>
+<button><a href="women.html">women</a></button>
+</div>
+
+<div id="sale">
+<a href="https://www.asos.com/women/sale/last-chance-to-buy/cat/?cid=19596&ctaref=hp|ww|promo|banner|1|edit|extra40offlastchance">Sale</a>
+<h3>EXTRA 40% OFF SALES PICKS LAST CHANS TO BY </h3>
+<h3><span> with code:- <div id="underbox">Lastchance</span></div></h3>
+</div>
+
+<div id="container-image">
+ 
+  <img src="https://t3.ftcdn.net/jpg/04/80/17/30/240_F_480173057_ta65ymgg4ycncrspfXvgoB43DB0ZUy8s.jpg" alt="">
+
+</div>
+
+
+
+<div id="container-img"> 
+  
+  <div>
+    <img src="https://content.asos-media.com/-/media/homepages/ww/2024/april/02-gbl/2024_homepage_moment_ww_best-dressed_870x1110_ww.jpg" alt="">
+    <button>BEST ADDRESS</button>
+  <p>whatever the occasion</p>
+  </div>
+
+<div>
+  <img src="https://content.asos-media.com/-/media/homepages/ww/2024/april/02-gbl/ww_global_natural_accessories_moment_870x1110.jpg" alt="">
+
+  <button>SPRING ACCESSORIES</button>
+  <p>Ft.totes,snnies and morel</p>
+</div>
+
+<div>
+  
+  
+  <img src="https://content.asos-media.com/-/media/homepages/ww/2024/april/02-gbl/ww_global_trainers_moment_870x1110.jpg" alt="">
+  <button>BEST ADDRESS</button>
+  <p>Summer-ready selects</p>
+</div>
+
+<div>
+  
+  <img src="https://content.asos-media.com/-/media/homepages/ww/2024/april/02-gbl/ww_global_nyx_moment_870x1110.jpg" alt="">
+  
+  
+  <button>NYX EXCLUSIVE</button>
+<p>Buttermelts Brozers are here</p>
+</div>
+
+</div>
+
+<div id="parentContainer">
+  <div class="childContainer"><img src="https://images.asos-media.com/products/adidas-originals-campus-00s-trainers-in-pink-tones/205410100-1-wonderclaypreloved?$n_640w$&wid=513&fit=constrain" alt=""></div>
+  <div class="childContainer"><img src="https://images.asos-media.com/products/fashionkilla-white-bow-detail-bardot-mini-dress-in-black/206031835-1-blackandwhite?$n_640w$&wid=513&fit=constrain"></div>
+  <div class="childContainer"><img src="https://images.asos-media.com/products/adidas-originals-campus-00s-trainers-in-pink-tones/205410100-1-wonderclaypreloved?$n_640w$&wid=513&fit=constrain" alt=""></div>
+  <div class="childContainer"><img src="https://images.asos-media.com/products/adidas-originals-campus-00s-trainers-in-pink-tones/205410100-1-wonderclaypreloved?$n_640w$&wid=513&fit=constrain" alt=""></div>
+  <div class="childContainer"><img src="https://images.asos-media.com/products/adidas-originals-campus-00s-trainers-in-pink-tones/205410100-1-wonderclaypreloved?$n_640w$&wid=513&fit=constrain" alt=""></div>
+  
+</div>
+
+
+<div id="anchor">
+  <div >
+  <a href="https://www.asos.com/women/a-to-z-of-brands/topshop/topshop-new-in/cat/?cid=50698&ctaref=hp|ww|prime|moment|1|edit|topshop"><img src="https://media.istockphoto.com/id/1169378197/photo/stylish-shopaholic-with-purchases.jpg?s=612x612&w=0&k=20&c=RGwdnF0wrWV8NNBawXAbzAHUe8sMBpLsEvIICLR9dM4=" alt=""></a>
+<div><button>shop now</button></div>
+</div>
+  <div>
+    <a href="https://www.asos.com/women/a-to-z-of-brands/topshop/topshop-new-in/cat/?cid=50698&ctaref=hp|ww|prime|moment|1|edit|topshop"><img src="https://media.istockphoto.com/id/1397185406/photo/portrait-of-woman-smiling-against-wall-with-palm-tree-shade.jpg?s=612x612&w=0&k=20&c=QnX-8KeN5NXpA00iDOHJ6usI0h8h69fbCmos2XRG78k=" alt=""></a>
+  <div>
+    <button>shop now</button>
+  </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <!-- Add more content as needed -->
+      </div>
+
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <!-- Add more links as needed -->
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email: example@example.com</p>
+        <p>Phone: 123-456-7890</p>
+        <!-- Add more contact information as needed -->
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2024 Your Website Name. All rights reserved.
+  </div>
+</footer>
+</body>
+<script>
+
+
+  function market(){
+   window.location.href = 'marketplace.html';
+  }
+  
+</script>
+
+<script src="button.js"></script>
+  
+<script src="sale.js"></script>
+
+<script src="search.js">
+  
+</script>
+</html>

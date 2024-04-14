@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #givenId{
+            color:red;
+        }
+        #container{
+            width: 60%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        #container>div{
+            box-shadow: 1px 1px 2px 4px gainsboro;
+            text-align: center;
+        }
+        #container>div>img{
+            width: 70%;
+            height: 150px;
+
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <div id="container">
+        
+    </div>
+    
+</body>
+<script>
+
+//   let obj =   {
+//   title : "Mobile 64Ram",
+//   description : "16 GB RAM | 64 MP Camera",
+//   img : "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70",
+//   price : 48999
+// }
+
+let Products = [
+
+{
+ 
+  description : "16 GB RAM | 64 MP Camera",
+  img : "https://images.asos-media.com/products/the-north-face-glacier-100-1-4-zip-fleece-in-cream/205445063-2?$n_480w$&wid=476&fit=constrain",
+  price : 48999
+},
+{
+
+  description : "4 Star | Instant ICE",
+  img : "https://images.asos-media.com/products/the-north-face-glacier-100-1-4-zip-fleece-in-black/205445520-2?$n_480w$&wid=476&fit=constrain",
+  price : 80000
+},
+{
+
+  description : "32 GB RAM | RTX 3060",
+  img : "https://images.asos-media.com/products/juicy-couture-diamante-logo-velour-zip-through-hoodie-co-ord-in-pastel-blue/205506590-2?$n_480w$&wid=476&fit=constrain",
+  price : 90599
+},
+{
+  
+  description : "32 inch LED Display",
+  img : "https://images.asos-media.com/products/asos-weekend-collective-half-zip-sweat-with-circle-logo-in-ice-marl/204935475-2?$n_480w$&wid=476&fit=constrain",
+  price : 48999
+},
+{
+  
+  description : "Running support | Memory Foam",
+  img : "https://images.asos-media.com/products/asos-design-oversized-hoodie-co-ord-in-washed-tan/205171681-2?$n_480w$&wid=476&fit=constrain",
+  price : 3999
+},
+{
+
+  description : "Stainless steel build",
+  img : "https://images.asos-media.com/products/topshop-seam-detail-sweat-in-ecru-cream/205317887-2?$n_480w$&wid=476&fit=constrain",
+  price : 8999
+},
+{
+  
+  description : "5 star , instant cooling",
+  img : "https://images.asos-media.com/products/new-balance-home-again-unisex-hoodie-in-burgundy-exclusive-to-asos/205464874-2?$n_480w$&wid=476&fit=constrain",
+  price : 62999
+},
+{
+ 
+  description : "32 inch LED Display",
+  img : "https://images.asos-media.com/products/asos-design-half-zip-sweatshirt-co-ord-in-ice-marl/204878393-2?$n_480w$&wid=476&fit=constrain",
+  price : 48999
+},
+{
+  
+  description : "Running support | Memory Foam",
+  img : "https://images.asos-media.com/products/asos-design-hoodie-with-tie-dye-heart-rock-graphic-in-black/205985051-2?$n_480w$&wid=476&fit=constrain",
+  price : 3999
+},
+{
+ 
+  description : "Stainless steel build",
+  img : "https://images.asos-media.com/products/daisy-street-panelled-stripe-la-sweatshirt-in-stone-and-navy/205495289-2?$n_480w$&wid=476&fit=constrain",
+  price : 8999
+},
+{
+  
+  description : "5 star , instant cooling",
+  img : "https://images.asos-media.com/products/daisy-street-ny-oversized-double-layer-hoodie-in-green-and-white/205495344-2?$n_480w$&wid=476&fit=constrain",
+  price : 62999
+},
+{
+  
+  
+  img : "https://images.asos-media.com/products/miss-selfridge-washed-new-york-graphic-oversized-sweat-in-green/205495380-2?$n_480w$&wid=476&fit=constrain",
+  description : "5 star , instant cooling",
+  price : 62999
+},
+
+]
+
+let container = document.querySelector("#container")
+
+Products.forEach(function(ele,i ){
+
+let separateDiv = document.createElement("div")   
+
+
+
+let img = document.createElement("img")
+img.src = ele.img
+
+let desc = document.createElement("p")
+// desc.setAttribute("id" , "desc")
+desc.id = "desc"
+desc.innerText = ele.description
+
+let price = document.createElement("p")
+price.innerText = ele.price
+
+separateDiv.append(img , desc , price)
+container.append(separateDiv)
+})
+
+Products.forEach(function(ele){
+    console.log(ele.title)
+})
+
+
+</script>
+</html>
